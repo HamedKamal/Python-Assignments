@@ -6,8 +6,7 @@ while len(splitted_text_list) != 1:
     for index, item in enumerate(splitted_text_list):
         # print(index,' ',item)
         
-        if item == '*' :
-                times_index=index
+        if item == '*' and index==1:
                 value = int(splitted_text_list[index-1]) * int(splitted_text_list[index+1])
                 print(value)
                 del splitted_text_list[index+1]
