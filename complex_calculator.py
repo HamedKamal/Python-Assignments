@@ -1,52 +1,66 @@
-user_input = input("enter your exppresion : ")
+user_input = input("Calculate : ")
 
 splitted_text_list = user_input.split()
 
+
+# recommend uncomment print functions 
+def times(index):
+    value = float(
+        splitted_text_list[index-1]) * float(splitted_text_list[index+1])
+    print(value)
+    del splitted_text_list[index+1]
+    del splitted_text_list[index]
+    del splitted_text_list[index-1]
+    splitted_text_list.insert(index-1, value)
+    # print(splitted_text_list)
+def devide(index):
+    value = float(
+        splitted_text_list[index-1]) / float(splitted_text_list[index+1])
+    print(value)
+    del splitted_text_list[index+1]
+    del splitted_text_list[index]
+    del splitted_text_list[index-1]
+    splitted_text_list.insert(index-1, value)
+    # print(splitted_text_list)
+
+def plus(index):
+    value = float(
+        splitted_text_list[index-1]) + float(splitted_text_list[index+1])
+    print(value)
+    del splitted_text_list[index+1]
+    del splitted_text_list[index]
+    del splitted_text_list[index-1]
+    splitted_text_list.insert(index-1, value)
+    # print(splitted_text_list)
+
+def minus(index):
+    value = float(
+        splitted_text_list[index-1]) - float(splitted_text_list[index+1])
+    print(value)
+    del splitted_text_list[index+1]
+    del splitted_text_list[index]
+    del splitted_text_list[index-1]
+    splitted_text_list.insert(index-1, value)
+    # print(splitted_text_list)
+
+
 while len(splitted_text_list) != 1:
-    
+
     for index, item in enumerate(splitted_text_list):
         # print(index,' ',item)
         if ('/' in splitted_text_list or '*' in splitted_text_list):
             if item == '*':
-                value = float(
-                    splitted_text_list[index-1]) * float(splitted_text_list[index+1])
-                print(value)
-                del splitted_text_list[index+1]
-                del splitted_text_list[index]
-                del splitted_text_list[index-1]
-                splitted_text_list.insert(index-1, value)
-                print(splitted_text_list)
+                times(index)
                 break
             elif item == '/':
-                value = float(
-                    splitted_text_list[index-1]) / float(splitted_text_list[index+1])
-                print(value)
-                del splitted_text_list[index+1]
-                del splitted_text_list[index]
-                del splitted_text_list[index-1]
-                splitted_text_list.insert(index-1, value)
-                print(splitted_text_list)
+                devide(index)
                 break
-
         else:
-
             if item == '+':
-                value = float(
-                    splitted_text_list[index-1]) + float(splitted_text_list[index+1])
-                print(value)
-                del splitted_text_list[index+1]
-                del splitted_text_list[index]
-                del splitted_text_list[index-1]
-                splitted_text_list.insert(index-1, value)
-                print(splitted_text_list)
+                plus(index)
                 break
             elif item == '-':
-                value = float(
-                    splitted_text_list[index-1]) - float(splitted_text_list[index+1])
-                print(value)
-                del splitted_text_list[index+1]
-                del splitted_text_list[index]
-                del splitted_text_list[index-1]
-                splitted_text_list.insert(index-1, value)
-                print(splitted_text_list)
+                minus(index)
                 break
+print('Your answer is ',splitted_text_list)
+# after 2 hours i did it 🎉
