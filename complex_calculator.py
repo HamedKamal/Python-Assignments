@@ -22,11 +22,3 @@ while len(splitted_text_list) != 1:
                 del splitted_text_list[index-1]
                 splitted_text_list.insert(index-1, value)
                 print(splitted_text_list)
-        # if item == '+'and index==1:
-        #         value = int(splitted_text_list[index-1]) / int(splitted_text_list[index+1])
-        #         print(value)
-        #         del splitted_text_list[index+1]
-        #         del splitted_text_list[index]
-        #         del splitted_text_list[index-1]
-        #         splitted_text_list.insert(index-1, value)
-        #         print(splitted_text_list)
