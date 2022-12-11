@@ -3,7 +3,7 @@ user_input = input("Calculate : ")
 splitted_text_list = user_input.split()
 
 
-# recommend uncomment print functions 
+# recommend uncomment print functions
 def times(index):
     value = float(
         splitted_text_list[index-1]) * float(splitted_text_list[index+1])
@@ -13,6 +13,7 @@ def times(index):
     del splitted_text_list[index-1]
     splitted_text_list.insert(index-1, value)
     # print(splitted_text_list)
+    
 def devide(index):
     value = float(
         splitted_text_list[index-1]) / float(splitted_text_list[index+1])
@@ -23,6 +24,7 @@ def devide(index):
     splitted_text_list.insert(index-1, value)
     # print(splitted_text_list)
 
+
 def plus(index):
     value = float(
         splitted_text_list[index-1]) + float(splitted_text_list[index+1])
@@ -32,6 +34,7 @@ def plus(index):
     del splitted_text_list[index-1]
     splitted_text_list.insert(index-1, value)
     # print(splitted_text_list)
+
 
 def minus(index):
     value = float(
@@ -62,5 +65,5 @@ while len(splitted_text_list) != 1:
             elif item == '-':
                 minus(index)
                 break
-print('Your answer is ',splitted_text_list)
+print('Your answer is ', splitted_text_list)
 # after 2 hours i did it 🎉
