@@ -30,9 +30,14 @@ while len(splited_word) != len(user_right_guess) and not finished:
                     print(dash_list)
             
         else:
-            guess_count+=1
+            user_worng_guess.append(user_trial)
             
-            print(guess_count)
+            if user_trial in user_worng_guess:
+                print('you used '+user_trial)
+                print(guess_count)
+            else:
+                guess_count+=1
+                print(guess_count)
     else:
         finished = True
 
