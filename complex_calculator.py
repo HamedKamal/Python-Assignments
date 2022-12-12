@@ -15,7 +15,6 @@ def times(index):
     splitted_text_list.insert(index-1, value)
     # print(splitted_text_list)
 
-
 def devide(index):
     value = float(
         splitted_text_list[index-1]) / float(splitted_text_list[index+1])
