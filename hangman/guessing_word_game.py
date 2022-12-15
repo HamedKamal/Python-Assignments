@@ -1,7 +1,7 @@
 # import random to choose random word from our lits
 import random
+from words import words
 # intialize our list
-words = ['hamed', 'computer', 'laptop']
 # pick a random word from our list "using our library"
 random_word = random.choice(words)
 # intialzize our user input
@@ -26,8 +26,8 @@ finished = False
 while len(splited_word) != len(user_right_guess) and not finished:
     # cheak if the user does not reach his trials
     if guess_wrong_count < guess_count_max:
-        # take the character from user
-        user_trial = input('enter the  charcter : ')
+        # take the character from user and lower it if the user enter AN UPPERCASE
+        user_trial = input('enter the  charcter : ').lower()
         # cheak the user entered character in our random word 'seacrch in our splitted word ' => list
         # and cheak that the user entered character not entered as a right guess before
         if user_trial in splited_word and user_trial not in user_right_guess:
@@ -70,5 +70,6 @@ while len(splited_word) != len(user_right_guess) and not finished:
 if len(user_right_guess)==len(splited_word):
     print('You Win 😎')
 else :
+    print(random_word)
     print('You Lose 😥')
 # github https://github.com/HamedKamal
