@@ -1,3 +1,4 @@
+print('enter your expression like this 5 * 9 - 8 / 7')
 user_input = input("Calculate : ")
 
 splitted_text_list = user_input.split()
@@ -7,17 +8,17 @@ splitted_text_list = user_input.split()
 def times(index):
     value = float(
         splitted_text_list[index-1]) * float(splitted_text_list[index+1])
-    print(value)
+    # print(value)
     del splitted_text_list[index+1]
     del splitted_text_list[index]
     del splitted_text_list[index-1]
     splitted_text_list.insert(index-1, value)
     # print(splitted_text_list)
-    
+
 def devide(index):
     value = float(
         splitted_text_list[index-1]) / float(splitted_text_list[index+1])
-    print(value)
+    # print(value)
     del splitted_text_list[index+1]
     del splitted_text_list[index]
     del splitted_text_list[index-1]
@@ -28,7 +29,7 @@ def devide(index):
 def plus(index):
     value = float(
         splitted_text_list[index-1]) + float(splitted_text_list[index+1])
-    print(value)
+    # print(value)
     del splitted_text_list[index+1]
     del splitted_text_list[index]
     del splitted_text_list[index-1]
@@ -39,7 +40,7 @@ def plus(index):
 def minus(index):
     value = float(
         splitted_text_list[index-1]) - float(splitted_text_list[index+1])
-    print(value)
+    # print(value)
     del splitted_text_list[index+1]
     del splitted_text_list[index]
     del splitted_text_list[index-1]
