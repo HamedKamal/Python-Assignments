@@ -51,4 +51,4 @@ elif polygonOrNot=='n':
         user_side_width = int(input('enter the lenth of width  : '))
         myrectangle=rectangle(lenth=user_side_lenth,width=user_side_width,numberOfSides=user_side_number)
         myrectangle.premiter()
-        myrectangle.arean()
+        myrectangle.area()

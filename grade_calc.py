@@ -17,10 +17,7 @@ class Student:
             Student.studetGrade.update({'Math grade':'C'})
         else:
             Student.studetGrade.update({'Math grade':'F'})    
-            
-        
 
-        
         if self.englishGrade>90:
             Student.studetGrade.update({'English grade':'A'})
         elif self.englishGrade>=70:
