@@ -47,5 +47,5 @@ class BankAccount:
 
 var=BankAccount('hamed')
 print(var.getname())
-var.__class__name='mohamed'
-print(var.__class__name)
+# var.__class__name='mohamed'
+# print(var.__class__name)

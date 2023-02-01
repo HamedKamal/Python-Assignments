@@ -1,18 +1,20 @@
 class Book:
     allbooks = {}
-
+    def createBook(self):
+        dictt={'name':self.name,'author':self.author,'price':self.price}
+        Book.allbooks.update(dictt)
+        Book.allbooks.update({self.name: self.author})
     def __init__(self, bookName, bookAuthor,price):
         self.name = bookName
         self.author = bookAuthor
         self.price = price
+        Book.createBook()
         
-        Book.allbooks.update({self.name: self.author})
+        
         print(Book.allbooks)
-    def createBook(self):
-        dictt={'name':self.name,'author':self.author,'price':self.price}
-        Book.allbooks.update(dictt)
+
 search=input('enter 1 for add \nenter 2 ')
-while search:
+while True:
     if search :
         user_pick=input('Pick a book ')
         if user_pick in Book.allbooks:

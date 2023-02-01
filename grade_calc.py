@@ -1,9 +1,12 @@
 class Student:
     studetsDict = {}
     studetGrade = {}
+    numberOfStudents=0
     def __init__(self, name, ids):
         self.name = name
         self.id = ids
+        Student.numberOfStudents+=1
+        print(f"numberOfStudents = {Student.numberOfStudents}")
     def setGrade(self, mathGrade, englishGrade, arabicGrade):
         self.mathGrade = mathGrade
         self.englishGrade = englishGrade
@@ -36,12 +39,16 @@ class Student:
         else:
             Student.studetGrade.update({'Arabic grade':'F'})
         print(Student.studetGrade)
-one = Student(name=input('enter your name : '),
-            ids=input('enter your id : '))
+# one = Student(name=input('enter your name : '),
+#             ids=input('enter your id : '))
 
-one.setGrade(
-    mathGrade=float(input('enter your math grade : ')),
-    englishGrade=float(input('enter your english grade : ')),
-    arabicGrade=float(input('enter your  arabic grade : '))
-)
-one.gradeCalculatue()
+# one.setGrade(
+#     mathGrade=float(input('enter your math grade : ')),
+#     englishGrade=float(input('enter your english grade : ')),
+#     arabicGrade=float(input('enter your  arabic grade : '))
+# )
+# one.gradeCalculatue()
+# one=Student(name='hamed',ids=55,)
+# on=Student(name='hamed',ids=55,)
+# on=Student(name='hamed',ids=55,)
+# oe=Student(name='hamed',ids=55,)
