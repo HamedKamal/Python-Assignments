@@ -7,7 +7,7 @@ def window():
     win.setGeometry(200,200,300,300)
     win.setWindowTitle('Hamed')
     label=QtWidgets.QLabel(win)
-    label.setText('hamoudy')
+    label.setText('hello world')
     label.move(50,50)
     win.show()
     sys.exit(app.exec_())

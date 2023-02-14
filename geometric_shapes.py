@@ -1,6 +1,4 @@
 import math
-
-
 class shape:
     def __init__(self, lenth, width):
         self.lenth = lenth
@@ -87,7 +85,7 @@ class Circle(shape):
 
 polygonOrNot = input('Is it a regular polygon ? (y/n)  : ')
 if polygonOrNot == 'y':
-    isitcircle=input('Is it a regular circle ? (y/n)  :')
+    isitcircle=input('Is it a  circle ? (y/n)  :')
     if isitcircle=="y":
         xCenter=float(input('enter the x of center '))
         yCenter=float(input('enter the y of center '))
